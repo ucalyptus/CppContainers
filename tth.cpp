@@ -1,20 +1,17 @@
 #include<iostream>
 #include<string>
-#include<unordered_map>
-#include<map>
+#include<set>
 int main()
 {
-	std::unordered_multimap<std::string,int> tempmap;
-	std::unordered_multimap<std::string,int>::iterator it;
+	std::set<int> set;
+	std::set<int>::iterator it;
+	set.insert(1);
+	set.insert(1);
+	set.insert(1);
 
+	for(it = set.begin(); it!=set.end(); it++)
+	std::cout<<*it<<std::endl;
 
-	tempmap.insert(std::make_pair("Peter",4));
-	tempmap.insert(std::make_pair("Chris",0));
-	tempmap.insert(std::make_pair("Chris",10));
-
-
-	for(it = tempmap.begin();it!= tempmap.end();it++)
-		std::cout<<it->second<<std::endl;
 
 
 	return 0;
